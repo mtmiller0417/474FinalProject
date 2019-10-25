@@ -2,31 +2,15 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "chrome",
-            "request": "launch",
-            "name": "Debug Test App",
-            "cwd": "${workspaceFolder}/test-app",
-            "url": "http://localhost:4200",
-            "webRoot": "${workspaceRoot}"
-        },
-        {
             "type": "node",
             "request": "launch",
-            "name": "Debug test API",
-            "cwd": "${workspaceFolder}/test-api",
-            "protocol": "legacy",
-            "runtimeExecutable": "npm",
-            "runtimeArgs": [
-                "run-script",
-                "debug"
-            ],
-            "port": 5859
+            "name": "Launch Program",
+            "program": "${workspaceFolder}\\index.js"
         },
         {
             "type": "node",
             "request": "launch",
             "name": "Debug security server",
-            "cwd": "${workspaceFolder}/security-server",
             "protocol": "legacy",
             "runtimeExecutable": "npm",
             "runtimeArgs": [
@@ -35,6 +19,5 @@
             ],
             "port": 5858
         }
-    }
-]
+    ]
 }
