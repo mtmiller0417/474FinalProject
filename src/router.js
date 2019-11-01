@@ -31,8 +31,39 @@ module.exports = function(app) {
          groupRouters = express.Router()
 
     apiRoutes.use('/users',userRoutes)
+    apiRoutes.use('/groups',groupRoutes)
+
+    // GET
+
+    userRoutes.get('/'); // Get all users      ???
+    groupRoutes.get('/') // Get all groups     ???
+    userRoutes.get('/user_id') // Get a specific user info
+    groupRoutes.get('/group_id') // Get specific user info
+    userRoutes.get('/group_id') // Get all the groups a user belongs to
+
+    // POST
+
+    userRoutes.post('/'); // Create a new user
+    groupRoutes.post('/'); // Create a new group
+    groupRoutes.post('/messages'); // Create a new message
+    groupRoutes.post('/events'); // Create a new event
+
+    // PUT
+
+    userRoutes.put('/user_id'); // Edit a users account
+    groupRoutes.put('/messages'); // Edit a message
+    groupRoutes.put('/events'); // Edit an event
+
+    // DELETE
+
+    userRoutes.delete('/user_id') // Delete a specific user
+    groupRoutes.delete('/group_id') //Delete a specific group
+    userRoutes.delete('/group_id') // Delete a group that a user belongs to
+    groupRoutes.delete('/event') // Deletes an event in a group
+
+
     // /api/users/register
-    userRoutes.post('/register')
+    userRoutes.post('/', AuthenticationController.createUser)
 
     apiRoutes.use('/groups',groupRoutes)
     // /api/groups/make_group
