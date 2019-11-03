@@ -24,3 +24,18 @@ export const login = function (req, res, next) {
         });
     });
 }
+
+// This posts a new user
+export const register = function(req, res, next){
+
+}
+
+// This edits a usrs profile
+export const edit_profile = function(req, res, next){
+
+}
+
+// This deletes a group_id from the users table
+export const leave_group = function(req, res, next){
+
+}
