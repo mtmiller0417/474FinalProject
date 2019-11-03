@@ -80,3 +80,5 @@ UserSchema.methods.toJson = function () {
   }
 }
 module.exports = mongoose.model('User', UserSchema);
+
+export var User = mongoose.model('User', UserSchema)
