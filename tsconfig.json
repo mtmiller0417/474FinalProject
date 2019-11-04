@@ -8,6 +8,7 @@
         "sourceMap": true,
         "outDir": "dist",
         "baseUrl": ".",
+        "allowJs": true,
         "paths": {
             "*": [
                 "node_modules/*"
@@ -15,6 +16,11 @@
         }
     },
     "include": [
-        "src/**/*"
+        "src/**/*", 
+        "src/",
+        "src/config", 
+        "src/controllers", 
+        "src/model", 
+        "src/security"
     ]
 }
