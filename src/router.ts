@@ -55,6 +55,7 @@ module.exports = function(app:any) {
     userRoutes.delete('/group_id', leave_group) // Delete a group that a user belongs to
     groupRoutes.delete('/event', delete_event) // Deletes an event in a group
 
+    app.use('/api', apiRoutes);
 
 
 
@@ -76,7 +77,7 @@ module.exports = function(app:any) {
     apiRoutes.use('/stuff',otherRoutes);*/
 
 
-    app.use('/api', apiRoutes);
+    //app.use('/api', apiRoutes);
 };
 
 /* const apiRoutes = express.Router(),
